@@ -1,20 +1,21 @@
 #include <vector>
 
-class Profile{
 
-  std::string name;
-  int age;
-  std::string city;
-  std::string country;
-  std::string pronouns;
-  std::string hobbies;
+class Profile{
+  private:
+    std::string name;
+    int age;
+    std::string city;
+    std::string country;
+    std::string pronouns;
+    std::vector<std::string> hobbies;
 
   public:
 
-  Profile(std::string nname, int nage, std::string ncity, std::string ncountry, std::string npronouns, std::string nhobby);
+    Profile(std::string nname, int nage, std::string ncity, std::string ncountry, std::string npronouns = "they/them");
+    
+   std::string viewProfile();
 
-  void getProfile();
-
-  std::string addHobby(std::string nhobby);
+   void newHobby(std::string nhobby);
 
 };
